@@ -6,6 +6,8 @@
 
 -> To run the server type :
     node index.js nameOfDatabase nameOfMongoCollection port
+    
+    like; node index.js users usersData 6969
 
 
 
