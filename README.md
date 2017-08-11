@@ -1,13 +1,10 @@
 # User Management based on MEAN STACK
 
 
--> Download index.js & package.json
+-> Download index.js & package.json  
 -> Run 'npm install' in the directory to install dependencies
 -> To run the server type :
-    node index.js usersDatabase usersCollection 10000
-  where;  usersDatabase     - name of the db you want to associate in mongodb
-          usersCollection   - name of the collection in mongodb
-          10000             - port
+    node index.js nameOfDatabase nameOfMongoCollection port
 
 
 
