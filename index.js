@@ -4,8 +4,8 @@ var assert = require('assert');
 var bodyParser = require('body-parser');
 var bcrypt = require('bcrypt');
 var app = express()
-var url = 'mongodb://localhost:27017/users';
-var table = 'users'
+var url = 'mongodb://localhost:27017/' + process.argv[2];
+var table = process.argv[3]
 app.use(bodyParser.json());
 
 
@@ -13,10 +13,10 @@ MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
   console.log("Connected correctly to server.");
   db.close();
+  app.listen(process.argv[4], function () {
+    console.log('App listening on port ' + process.argv[4] + "!")
+  })
 });
-app.listen(3000, function () {
-  console.log('App listening on port 3000!')
-})
 
 
 app.post('/signup', function (request, response) {
