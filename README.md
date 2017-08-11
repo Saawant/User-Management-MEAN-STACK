@@ -3,6 +3,7 @@
 
 -> Download index.js & package.json  
 -> Run 'npm install' in the directory to install dependencies
+
 -> To run the server type :
     node index.js nameOfDatabase nameOfMongoCollection port
 
